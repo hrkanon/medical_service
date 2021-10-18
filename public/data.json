@@ -1,9 +1,122 @@
 [
   {
     "id": 1,
-    "serviceName": "Neurology",
-    "descriptionOne": " MedService Dhaka is the only hospital in the country to be providing advanced and comprehensive Neurology & Neurosurgery facilities under one roof. The Neurology Department has experienced American Board Certified Neurologist and also the only qualified epilepsy specialist of the country.",
+    "name": "Neurology",
+    "descriptionOne": " MedService Dhaka is the only hospital in the country to be providing advanced and comprehensive Neurology & Neurosurgery facilities under one roof. ",
     "descriptionTwo": "Department of Neurology of MedService Dhaka provides comprehensive consultative services, diagnostic testing and treatment for a broad spectrum of neurological conditions, including diseases of the brain, spinal cord, peripheral nerves and muscles.",
-    "imageOne": ""
+    "imageOne": "https://i.ibb.co/fr2NzSf/nurology-icon.webp",
+    "imageTwo": "https://i.ibb.co/pQ5kMHB/neurology-2.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Joint Care",
+    "descriptionOne": " MedService Joint Care & Wellness Centre is the first & only super specialty Joint Care & Wellness Centre in Bangladesh dealing with all knee related problems.",
+    "descriptionTwo": "Since its inception it has been providing quality services to the patients having knee sufferings by the renowned knee specialist of Bangladesh, Dr. M Ali. He has been performing authoritative practice in this hospital over a decade and has done more than 7,000 knee surgeries here in MedService Dhaka.",
+    "imageOne": "https://i.ibb.co/XjdWFVd/bone-icon.webp",
+    "imageTwo": "https://i.ibb.co/hHzFbWS/joint-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Cardiology",
+    "descriptionOne": " The MedService Dhaka has gained reputation for its dynamic and innovation in the diagnosis, investigation and treatment of patients with all forms of heart diseases,",
+    "descriptionTwo": "We have a dedicated unit of four full-time Consultants, and a team of junior doctors, nurses, and technicians trained to the highest standard in cardiac assessment.",
+    "imageOne": "https://i.ibb.co/c8Rg2fZ/heart-icon.webp",
+    "imageTwo": "https://i.ibb.co/WDcbxWQ/heart-2.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Kidney & Urology",
+    "descriptionOne": " MedService Dhaka offers comprehensive kidney transplantation services with collaboration of Department of Urology and Department of Nephrology.",
+    "descriptionTwo": "Our kidney transplant program offers the safest services with the best success rates and almost zero percent infection rates, which has made it a national referral program. The program draws on state-of-the-art technology and leading-edge medical and surgical interventions to provide patients with individualized, on-going care.",
+    "imageOne": "https://i.ibb.co/CVFNznT/kidney-icon.webp",
+    "imageTwo": "https://i.ibb.co/S3rSf2h/Woman-holding-model-human-kidney-halves-at-white-body-This-artificial-model-of-a-kidney-organ-is-use.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Cancer Care",
+    "descriptionOne": " The division of MedService Cancer Care Centre provides consultations by Consultants- Radiation & Clinical Oncologist, ICU Care, for adult and child cancer patients.",
+    "descriptionTwo": "The center is getting ready to provide world class cancer treatment facilities starting from preventive to palliative care under one roof. Evercare Hospital Dhaka, has installed a high-end fully loaded Radiotherapy machine, LINAC HD -VERSA Signature model.",
+    "imageOne": "https://i.ibb.co/hg9sfF5/pulmonery-icon.webp",
+    "imageTwo": "https://i.ibb.co/5sPCRKZ/Cancer-cells-vis-3d-rendered-image-enhanced-scanning-electron-micrograph-SEM-of-cancer-cell-Visual-o.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Mother and Child Care",
+    "descriptionOne": " The Department of Obstetrics & Gynaecology of MedService Dhaka provides comprehensive services to women in the treatment and management of gynaecologic and obstetric conditions.",
+    "descriptionTwo": "We treat variety of problems of female reproductive organs and utilize minimally invasive laparoscopic surgeries and laser surgeries. Our maternity services manage and care for women during pregnancy, childbirth and postnatal periods.",
+    "imageOne": "https://i.ibb.co/5FDsZGG/child-icon.webp",
+    "imageTwo": "https://i.ibb.co/M9ygCTJ/Happy-small-girl-holding-hands-on-mothers-belly-and-listening-baby-s-heartbeat-Innocent-girl-Touchin.jpg"
+  },
+  {
+    "id": 7,
+    "type": "doctor",
+    "name": "Monowara Begum",
+    "degree": "MBBS, MCPS, MS(Obs/Gynae ",
+    "degignation": "Senior Consultant -Obestetrics/ Gynaecology",
+    "imageOne": "https://i.ibb.co/XDG5p8Y/doctor-4.jpg"
+  },
+  {
+    "id": 8,
+    "type": "doctor",
+    "name": "Dr. Mahbubar Rahman",
+    "degree": "MBBS, MD (Neurology)",
+    "degignation": "Senior Consultant & Coordinator – Neurology",
+    "imageOne": "https://i.ibb.co/581LGmn/doctor-1.jpg"
+  },
+  {
+    "id": 9,
+    "type": "doctor",
+    "name": "Dr. S.M. Hasan Shahriar",
+    "degree": "MBBS, MRCP (UK)",
+    "degignation": "Senior Consultant- Neurology",
+    "imageOne": "https://i.ibb.co/yPRJNXZ/doctor-2.jpg"
+  },
+  {
+    "id": 10,
+    "type": "doctor",
+    "name": "Prof. Dr. A. Q. M. Reza",
+    "degree": "MBBS, MD (Cardiology)",
+    "degignation": "Senior Consultant & Coordinator – Clinical & Interventional Cardiology",
+    "imageOne": "https://i.ibb.co/t4Ks7mM/doctor-5.jpg"
+  },
+  {
+    "id": 11,
+    "type": "doctor",
+    "name": "Prof. Dr. Tamzeed Ahmed",
+    "degree": "MBBS, MRCP (UK), FRCP, FACC, FSCAI",
+    "degignation": "Senior Consultant – Clinical & Interventional Cardiology",
+    "imageOne": "https://i.ibb.co/6wzTsS5/doctor-6.jpg"
+  },
+  {
+    "id": 12,
+    "type": "doctor",
+    "name": "Dr. Ferdous Shahriar Sayed",
+    "degree": "MBBS, MD (Radiotherapy)",
+    "degignation": "Senior Consultant – Medical Oncology",
+    "imageOne": "https://i.ibb.co/PTfHLfm/doctor-8.jpg"
+  },
+  {
+    "id": 13,
+    "type": "doctor",
+    "name": "Dr. Farzana Islam",
+    "degree": "MBBS (DMC), DCH (BICH), MCPS",
+    "degignation": "Specialist and Head-Child Development Centre",
+    "imageOne": "https://i.ibb.co/R27skvK/doctor-10.jpg"
+  },
+  {
+    "id": 14,
+    "type": "doctor",
+    "name": "Prof. (Dr.) Hafeza Aftab",
+    "degree": "MBBS, MD (Gastroenterology)",
+    "degignation": "Consultant – Gastroenterology & Hepatology & Pancreatic Disease",
+    "imageOne": "https://i.ibb.co/r4RH1mn/doctor-12.jpg"
+  },
+  {
+    "id": 15,
+    "type": "doctor",
+    "name": "Prof. Dr. Sayeda Rahim",
+    "degree": "MBBS, MD (Gastroenterology)",
+    "degignation": "Senior Consultant- Gastroenterology",
+    "imageOne": "https://i.ibb.co/DVKG2Nq/doctor-11.jpg"
   }
 ]

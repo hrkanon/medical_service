@@ -27,11 +27,14 @@ const Header = () => {
               <Nav.Link className="" as={HashLink} to="/home">
                 Home
               </Nav.Link>
-              <Nav.Link className="px-4" href="#pricing">
+              <Nav.Link className="px-4" as={HashLink} to="/services">
                 Services
               </Nav.Link>
+              <Nav.Link className="px-4" as={Link} to="/doctors">
+                doctors
+              </Nav.Link>
               <Nav.Link href="#pricing">About</Nav.Link>
-              <Nav.Link className="px-4" href="#pricing">
+              <Nav.Link className="px-4" as={Link} to="/appointment">
                 Appointment
               </Nav.Link>
               {user.email ? (

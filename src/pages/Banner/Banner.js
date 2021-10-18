@@ -11,8 +11,8 @@ const Banner = () => {
             <h1 className="heading-one ">HIGHEST QUALITY MEDICAL TREATMENT</h1>
             <h3> YOUR HEALTH IS OUR CONCERN</h3>
           </div>
-          <div className="col-md-6">
-            <img className="img-fluid" src={img} alt="" />
+          <div className="col-md-6 text-center">
+            <img className="banner-img img-fluid" src={img} alt="" />
           </div>
         </div>
       </div>

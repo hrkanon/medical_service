@@ -1,0 +1,10 @@
+.doc-img {
+  width: 250px;
+  height: 200px;
+}
+hr {
+  width: 120px;
+  margin: auto;
+  color: #16bae8;
+  border: 2px solid #16bae8;
+}

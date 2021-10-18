@@ -1,12 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AuthProvider from "./Context/AuthProvider";
-import Footer from "./pages/Footer/Footer";
+import Appointment from "./pages/Appointment/Appointment";
+import Doctors from "./pages/Doctors/Doctors";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import NotFound from "./pages/NotFound/NotFound";
 import Register from "./pages/Register/Register";
+import Services from "./pages/Services/Services";
+import ShowDetails from "./pages/ShowDetails/ShowDetails";
+import Footer from "./Shared/Footer/Footer";
 import Header from "./Shared/Header/Header";
+import PrivateRoute from "./Private/PrivateRoute";
 
 function App() {
   return (
@@ -21,11 +26,17 @@ function App() {
             <Home></Home>
           </Route>
           <Route exact path="/services">
-            <Home></Home>
+            <Services></Services>
           </Route>
           <Route exact path="/doctors">
-            <Home></Home>
+            <Doctors></Doctors>
           </Route>
+          <Route path="/details/:serviceId">
+            <ShowDetails></ShowDetails>
+          </Route>
+          <PrivateRoute path="/appointment">
+            <Appointment></Appointment>
+          </PrivateRoute>
           <Route exact path="/login">
             <Login></Login>
           </Route>

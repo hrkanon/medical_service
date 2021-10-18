@@ -55,7 +55,10 @@ const Register = () => {
           </Form.Group>
           <p>
             Already have an Account?
-            <Link to="/login"> click here to login</Link>
+            <Link className="text-danger " to="/login">
+              {" "}
+              click here to login
+            </Link>
           </p>
           <Button
             onClick={() => signUpWithEmailPassword(name, email, password)}

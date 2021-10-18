@@ -25,7 +25,10 @@ const Login = () => {
           </Form.Group>
           <p>
             New in MedService?
-            <Link to="/register"> click here to register</Link>
+            <Link className="text-danger " to="/register">
+              {" "}
+              click here to register
+            </Link>
           </p>
           <Button variant="primary" type="submit">
             Login
