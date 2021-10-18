@@ -1,0 +1,14 @@
+.banner {
+  height: 78vh;
+  background-color: #85b7c4;
+
+  /* background-image: url("../../images/banner-img-4.jpeg"); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-blend-mode: overlay; */
+  /* background-size: cover; */
+}
+.heading-one {
+  font-weight: 800;
+  font-size: 45px;
+}
