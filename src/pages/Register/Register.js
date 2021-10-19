@@ -9,7 +9,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
-  console.log(name, email, password);
+  const { signUpWithEmailPassword } = useAuth();
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -21,7 +21,10 @@ const Register = () => {
     setPassword(e.target.value);
   };
 
-  const { signUpWithEmailPassword } = useAuth();
+  const handleRegister = () => {
+    signUpWithEmailPassword(name, email, password);
+  };
+
   return (
     <div>
       <div className="login-form mx-auto mt-5">
@@ -61,7 +64,8 @@ const Register = () => {
             </Link>
           </p>
           <Button
-            onClick={() => signUpWithEmailPassword(name, email, password)}
+            className="w-100"
+            onClick={handleRegister}
             variant="primary"
             type="submit"
           >

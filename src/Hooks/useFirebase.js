@@ -18,7 +18,6 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
 
-  const history = useHistory();
   const auth = getAuth();
 
   //   sign up using google
@@ -46,8 +45,6 @@ const useFirebase = () => {
         setUser(result.user);
         updateProfile(auth.currentUser, {
           displayName: name,
-        }).then(() => {
-          history.push("/");
         });
       })
       .catch((error) => {

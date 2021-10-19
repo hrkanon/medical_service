@@ -15,21 +15,16 @@ const ShowDetails = () => {
   }, [services, serviceId]);
 
   return (
-    // <div>
-    //   <h2>Showing Details</h2>
-    //   <img src={details?.imageTwo} alt="" />
-    //   <h4>{details?.name}</h4>
-    // </div>
-    <div className="container mt-5">
+    <div className="container mt-3 show-details">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-6 d-flex flex-column justify-content-center">
           <h2>{details?.name}</h2>
           <p>
             {details?.descriptionOne} {details?.descriptionTwo}
           </p>
         </div>
-        <div className="col-md-6">
-          <img className="details-img" src={details?.imageTwo} alt="" />
+        <div className="col-md-6 d-flex flex-column justify-content-center">
+          <img className="details-img " src={details?.imageTwo} alt="" />
         </div>
       </div>
     </div>

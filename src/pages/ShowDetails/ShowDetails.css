@@ -1,3 +1,6 @@
 .details-img {
-  width: 300px;
+  width: 80%;
+}
+.show-details {
+  height: 63vh;
 }

@@ -1,11 +1,12 @@
 import React from "react";
 import "./Review.css";
-import bgReview from "../../images/banner-5.jpeg";
+import reviewBg from "../../images/banner-img-4.jpeg";
+
 const Review = () => {
   return (
-    <div className="my-5 review">
-      <div>
-        <h2 className="fw-bold text-center">
+    <div id="review" className="my-5 ">
+      <div className="review-details">
+        <h2 className="fw-bold text-center review-heading">
           <span className="text-warning">What Others Said</span> About Medicare
         </h2>
         <hr />
@@ -21,7 +22,7 @@ const Review = () => {
             issues is amazing. especially your emergency response in the
             emergency section is really quick and handle situation efficiently.
           </p>
-          <hr className="w-100" />
+          <hr className="w-100 text-dark border-dark" />
           <h4 className="fw-bold">Kaniz Fatema</h4>
 
           <div className="star text-center">
@@ -38,7 +39,7 @@ const Review = () => {
             The environment of MedService inside and outside is soothing and
             relaxing. Thank you MedService Team!
           </p>
-          <hr className="w-100 " />
+          <hr className="w-100 text-dark border-dark" />
           <h4 className="fw-bold"> Jahanara Ferdous</h4>
           <div className="star text-center">
             <i class="fas fa-star text-warning"></i>
@@ -54,7 +55,7 @@ const Review = () => {
             stuffs and the technology you use everything is the international
             standard. Keep growing MedService!!
           </p>
-          <hr className="w-100" />
+          <hr className="w-100 text-dark border-dark" />
           <h4 className="fw-bold">John Smith</h4>
           <div className="star text-center">
             <i class="fas fa-star text-warning"></i>
@@ -70,7 +71,7 @@ const Review = () => {
             friendly stuff, doctors and the cost of the service is preety
             reasonable. Keep it up MedService!!
           </p>
-          <hr className="w-100" />
+          <hr className="w-100 text-dark border-dark" />
           <h4 className="fw-bold">Abul Kalam</h4>
           <div className="star text-center">
             <i class="fas fa-star text-warning"></i>

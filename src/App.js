@@ -12,6 +12,7 @@ import ShowDetails from "./pages/ShowDetails/ShowDetails";
 import Footer from "./Shared/Footer/Footer";
 import Header from "./Shared/Header/Header";
 import PrivateRoute from "./Private/PrivateRoute";
+import Review from "./pages/Review/Review";
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
           <PrivateRoute path="/appointment">
             <Appointment></Appointment>
           </PrivateRoute>
+          <Route exact path="/review">
+            <Review></Review>
+          </Route>
           <Route exact path="/login">
             <Login></Login>
           </Route>

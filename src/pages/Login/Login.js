@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useHistory, useLocation } from "react-router";
@@ -6,7 +6,10 @@ import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 
 const Login = () => {
-  const { error, handleGoogleSignIn } = useAuth();
+  const { error, handleGoogleSignIn, signInUsingEmailPassword } = useAuth();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const location = useLocation();
   const history = useHistory();
@@ -17,6 +20,18 @@ const Login = () => {
       history.push(redirect_url);
     });
   };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLogin = () => {
+    signInUsingEmailPassword(email, password);
+  };
+
   return (
     <div>
       <div className="login-form mx-auto mt-5">
@@ -24,7 +39,11 @@ const Login = () => {
         <Form className="form ">
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control
+              onBlur={handleEmailChange}
+              type="email"
+              placeholder="Enter email"
+            />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
@@ -32,7 +51,11 @@ const Login = () => {
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control
+              onBlur={handlePasswordChange}
+              type="password"
+              placeholder="Password"
+            />
           </Form.Group>
           <p>
             New in MedService?
@@ -42,15 +65,19 @@ const Login = () => {
             </Link>
           </p>
           <p>{error}</p>
-          <Button variant="primary" type="submit">
+
+          <Button
+            className="w-100"
+            onClick={handleLogin}
+            variant="primary"
+            type="submit"
+          >
             Login
           </Button>
-          <div className="d-flex mt-2 align-items-center or">
-            <div className="border w-50"></div>
-            <p>Or</p>
-            <div className="border w-50"></div>
-          </div>
-          <Button onClick={googleSignIn} variant="info">
+
+          <p className="fw-bold mt-2 text-center">Or</p>
+
+          <Button className="w-100" onClick={googleSignIn} variant="primary">
             {" "}
             Login with Google
           </Button>

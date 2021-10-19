@@ -11,11 +11,11 @@ const Header = () => {
   return (
     <div>
       <Navbar
-        sticky="top"
         collapseOnSelect
         expand="lg"
         bg="light"
         variant="light"
+        sticky="top"
       >
         <Container>
           <Navbar.Brand>
@@ -33,7 +33,9 @@ const Header = () => {
               <Nav.Link className="px-4" as={Link} to="/doctors">
                 doctors
               </Nav.Link>
-              <Nav.Link href="#pricing">About</Nav.Link>
+              <Nav.Link as={HashLink} to="/review">
+                Reviews
+              </Nav.Link>
               <Nav.Link className="px-4" as={Link} to="/appointment">
                 Appointment
               </Nav.Link>
