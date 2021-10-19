@@ -18,32 +18,32 @@ const Header = () => {
         sticky="top"
       >
         <Container>
-          <div className="d-flex align-items-center">
-            <div>
+          <div className="nav-container row">
+            <div className="col-md-6 col-6">
               <Navbar.Brand>
                 <img className="w-50" src={logo} alt="" />
               </Navbar.Brand>
             </div>
-            <div>
+            <div className="col-md-6 col-6 text-right my-auto ">
               <Navbar.Toggle
-                className="ms-auto"
+                className="toggle-button"
                 aria-controls="responsive-navbar-nav"
               />
-              <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="ms-auto text-center">
+              <Navbar.Collapse className="nav-menu" id="responsive-navbar-nav">
+                <Nav>
                   <Nav.Link className="" as={HashLink} to="/home">
                     Home
                   </Nav.Link>
-                  <Nav.Link className="px-4" as={HashLink} to="/services">
+                  <Nav.Link className="" as={HashLink} to="/services">
                     Services
                   </Nav.Link>
-                  <Nav.Link className="px-4" as={Link} to="/doctors">
+                  <Nav.Link className="" as={Link} to="/doctors">
                     doctors
                   </Nav.Link>
                   <Nav.Link as={HashLink} to="/review">
                     Reviews
                   </Nav.Link>
-                  <Nav.Link className="px-4" as={Link} to="/appointment">
+                  <Nav.Link className="" as={Link} to="/appointment">
                     Appointment
                   </Nav.Link>
                   {user.email ? (
