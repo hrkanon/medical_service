@@ -1,11 +1,22 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useHistory, useLocation } from "react-router";
 import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 
 const Login = () => {
-  const { user, error, handleGoogleSignIn, handleSignOut } = useAuth();
+  const { error, handleGoogleSignIn } = useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_url = location.state?.from || "/home";
+
+  const googleSignIn = () => {
+    handleGoogleSignIn().then((res) => {
+      history.push(redirect_url);
+    });
+  };
   return (
     <div>
       <div className="login-form mx-auto mt-5">
@@ -30,6 +41,7 @@ const Login = () => {
               click here to register
             </Link>
           </p>
+          <p>{error}</p>
           <Button variant="primary" type="submit">
             Login
           </Button>
@@ -38,7 +50,7 @@ const Login = () => {
             <p>Or</p>
             <div className="border w-50"></div>
           </div>
-          <Button onClick={handleGoogleSignIn} variant="info">
+          <Button onClick={googleSignIn} variant="info">
             {" "}
             Login with Google
           </Button>

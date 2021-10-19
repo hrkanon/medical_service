@@ -16,6 +16,9 @@ const Footer = () => {
               <i class="far fa-envelope"></i> care@lyfboat.com
             </p>
             <p>
+              <i class="fas fa-map-marker-alt"></i> 48 Gulshan Avenue, Dhaka.
+            </p>
+            <p>
               <i class="fab fa-facebook-square icon"></i>
               <i class="fab fa-instagram-square icon px-2"></i>
               <i class="fab fa-twitter-square icon"></i>
