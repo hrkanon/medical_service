@@ -18,8 +18,8 @@ const ShowDetails = () => {
     <div className="container mt-3 show-details">
       <div className="row">
         <div className="col-md-6 d-flex flex-column justify-content-center">
-          <h2>{details?.name}</h2>
-          <p>
+          <h2 className="text-center details-heading">{details?.name}</h2>
+          <p className="text-center">
             {details?.descriptionOne} {details?.descriptionTwo}
           </p>
         </div>

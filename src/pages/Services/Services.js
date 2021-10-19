@@ -16,7 +16,7 @@ const Services = () => {
         </div>
         <div className="row g-3 mt-4">
           {allServices.map((service) => (
-            <Service service={service}></Service>
+            <Service key={service.id} service={service}></Service>
           ))}
         </div>
       </div>

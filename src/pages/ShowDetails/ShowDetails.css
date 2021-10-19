@@ -4,3 +4,7 @@
 .show-details {
   height: 63vh;
 }
+.details-heading {
+  font-size: 40px;
+  font-weight: 700;
+}

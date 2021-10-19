@@ -8,11 +8,11 @@ const About = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 my-auto">
-            <img className="img-fluid py-5 rounded" src={about} alt="" />
+            <img className=" img-fluid py-5" src={about} alt="" />
           </div>
           <div className="col-md-6 my-auto">
             <h2 className="fw-bold mt-2 text-decoration-underline">ABOUT US</h2>
-            <p>
+            <p className="mb-4">
               For over three decades, we have specialised in specific areas of
               medicine - mental health, orthopaedics, neurology, surgery and
               general medicine. This approach has given us an in-depth

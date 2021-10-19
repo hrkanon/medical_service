@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import "./Register.css";
 
 const Register = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
 
-  const { signUpWithEmailPassword } = useAuth();
+  const { signUpWithEmailPassword, error } = useAuth();
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -21,57 +20,48 @@ const Register = () => {
     setPassword(e.target.value);
   };
 
-  const handleRegister = () => {
+  const handleRegister = (name, email, password) => {
     signUpWithEmailPassword(name, email, password);
   };
 
   return (
-    <div>
-      <div className="login-form mx-auto mt-5">
-        <h2 className="text-center">Please Register</h2>
-        <Form className="  form ">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Your Name</Form.Label>
-            <Form.Control
-              onBlur={handleNameChange}
-              type="text"
-              placeholder="Enter your name"
-            />
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              onBlur={handleEmailChange}
-              type="email"
-              placeholder="Enter email"
-            />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
+    <div className="container login-form py-3 mt-5">
+      <h2 className="text-center py-3">Please Register</h2>
+      <div className="form d-flex flex-column align-items-center">
+        <input
+          onBlur={handleNameChange}
+          type="text"
+          placeholder="Your Name"
+          required
+        />
+        <br />
+        <input
+          onBlur={handleEmailChange}
+          type="email"
+          placeholder="your email"
+          required
+        />
+        <br />
+        <input
+          onBlur={handlePasswordChange}
+          type="password"
+          placeholder="password"
+          required
+        />
+        <br />
+        <p>
+          Already have an Account?
+          <Link className="text-danger ps-2 " to="/login">
+            click here to login
+          </Link>
+        </p>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              onBlur={handlePasswordChange}
-              type="password"
-              placeholder="Password"
-            />
-          </Form.Group>
-          <p>
-            Already have an Account?
-            <Link className="text-danger " to="/login">
-              {" "}
-              click here to login
-            </Link>
-          </p>
-          <Button
-            className="w-100"
-            onClick={handleRegister}
-            variant="primary"
-            type="submit"
-          >
-            Register
-          </Button>
-        </Form>
+        <button
+          className="btn btn-primary w-100"
+          onClick={() => handleRegister(name, email, password)}
+        >
+          Register
+        </button>
       </div>
     </div>
   );

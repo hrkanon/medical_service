@@ -1,6 +1,5 @@
 import React from "react";
 import "./Review.css";
-import reviewBg from "../../images/banner-img-4.jpeg";
 
 const Review = () => {
   return (
@@ -9,7 +8,6 @@ const Review = () => {
         <h2 className="fw-bold text-center review-heading">
           <span className="text-warning">What Others Said</span> About Medicare
         </h2>
-        <hr />
         <p className="text-center">
           5 star customer reviews are often given to MedService for the doctors,
           technology and the fast, helpful patient support team.
@@ -22,25 +20,28 @@ const Review = () => {
             issues is amazing. especially your emergency response in the
             emergency section is really quick and handle situation efficiently.
           </p>
-          <hr className="w-100 text-dark border-dark" />
-          <h4 className="fw-bold">Kaniz Fatema</h4>
-
-          <div className="star text-center">
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning"></i>
-            <i class="fas fa-star text-warning "></i>
-            <i class="fas fa-star text-warning "></i>
-            <i class="fas fa-star text-warning"></i>
+          <div>
+            <hr className="w-100 text-dark border-dark" />
+            <h4 className="fw-bold">Kaniz Fatema</h4>
+            <div className="star text-center">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning "></i>
+              <i class="fas fa-star text-warning "></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
           </div>
         </div>
         <div className="col-md-3  col-12 text-center">
           <p>
             Amazing and lighting fast support from a team that is always there.
             The environment of MedService inside and outside is soothing and
-            relaxing. Thank you MedService Team!
+            relaxing. Thank you MedService for your Wonderful Team!
           </p>
-          <hr className="w-100 text-dark border-dark" />
-          <h4 className="fw-bold"> Jahanara Ferdous</h4>
+          <div>
+            <hr className="w-100 text-dark border-dark" />
+            <h4 className="fw-bold"> Jahanara Ferdous</h4>
+          </div>
           <div className="star text-center">
             <i class="fas fa-star text-warning"></i>
             <i class="fas fa-star text-warning"></i>
@@ -55,8 +56,10 @@ const Review = () => {
             stuffs and the technology you use everything is the international
             standard. Keep growing MedService!!
           </p>
-          <hr className="w-100 text-dark border-dark" />
-          <h4 className="fw-bold">John Smith</h4>
+          <div>
+            <hr className="w-100 text-dark border-dark" />
+            <h4 className="fw-bold">John Smith</h4>
+          </div>
           <div className="star text-center">
             <i class="fas fa-star text-warning"></i>
             <i class="fas fa-star text-warning"></i>
@@ -69,10 +72,12 @@ const Review = () => {
           <p>
             MedService is one of the leading hospital in Bangladesh. they have
             friendly stuff, doctors and the cost of the service is preety
-            reasonable. Keep it up MedService!!
+            reasonable compare to their service. Keep it up MedService!!
           </p>
-          <hr className="w-100 text-dark border-dark" />
-          <h4 className="fw-bold">Abul Kalam</h4>
+          <div>
+            <hr className="w-100 text-dark border-dark" />
+            <h4 className="fw-bold">Abul Kalam</h4>
+          </div>
           <div className="star text-center">
             <i class="fas fa-star text-warning"></i>
             <i class="fas fa-star text-warning"></i>

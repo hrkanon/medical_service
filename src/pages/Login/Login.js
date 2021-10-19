@@ -6,14 +6,14 @@ import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 
 const Login = () => {
-  const { error, handleGoogleSignIn, signInUsingEmailPassword } = useAuth();
+  const { handleGoogleSignIn, signInUsingEmailPassword } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const location = useLocation();
   const history = useHistory();
-  const redirect_url = location.state?.from || "/home";
+  const redirect_url = location.state?.from || "/";
 
   const googleSignIn = () => {
     handleGoogleSignIn().then((res) => {
@@ -28,60 +28,42 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleLogin = () => {
+  const handleLogin = (email, password) => {
     signInUsingEmailPassword(email, password);
   };
 
   return (
-    <div>
-      <div className="login-form mx-auto mt-5">
-        <h2 className="text-center">Please Login</h2>
-        <Form className="form ">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              onBlur={handleEmailChange}
-              type="email"
-              placeholder="Enter email"
-            />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              onBlur={handlePasswordChange}
-              type="password"
-              placeholder="Password"
-            />
-          </Form.Group>
-          <p>
-            New in MedService?
-            <Link className="text-danger " to="/register">
-              {" "}
-              click here to register
-            </Link>
-          </p>
-          <p>{error}</p>
-
-          <Button
-            className="w-100"
-            onClick={handleLogin}
-            variant="primary"
-            type="submit"
-          >
-            Login
-          </Button>
-
-          <p className="fw-bold mt-2 text-center">Or</p>
-
-          <Button className="w-100" onClick={googleSignIn} variant="primary">
-            {" "}
-            Login with Google
-          </Button>
-        </Form>
+    <div className="container login-form py-3 mt-5">
+      <h2 className="text-center py-3">Please Login</h2>
+      <div className="form d-flex flex-column align-items-center">
+        <input
+          onBlur={handleEmailChange}
+          type="email"
+          placeholder="your email"
+        />
+        <br />
+        <input
+          onBlur={handlePasswordChange}
+          type="password"
+          placeholder="password"
+        />
+        <br />
+        <p>
+          New in MedService?
+          <Link className="text-danger ps-2" to="/register">
+            click here to register
+          </Link>
+        </p>
+        <button
+          className="btn btn-primary w-100"
+          onClick={() => handleLogin(email, password)}
+        >
+          Login
+        </button>
+        <p className="fw-bold mt-2 text-center">Or</p>
+        <button className="w-100 btn btn-primary" onClick={googleSignIn}>
+          Login with Google
+        </button>
       </div>
     </div>
   );

@@ -10,20 +10,23 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { useHistory } from "react-router";
 
 initializeAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   const auth = getAuth();
 
   //   sign up using google
   const handleGoogleSignIn = () => {
+    setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
-    return signInWithPopup(auth, googleProvider);
+    return signInWithPopup(auth, googleProvider).finally(() =>
+      setIsLoading(false)
+    );
   };
 
   useEffect(() => {
@@ -33,23 +36,20 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
+      setIsLoading(false);
     });
     return () => unsubscribed;
   }, []);
 
-  //   sign up with email
+  //   Registration with email and password
   const signUpWithEmailPassword = (name, email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        console.log(result.user);
-        setUser(result.user);
-        updateProfile(auth.currentUser, {
-          displayName: name,
-        });
-      })
-      .catch((error) => {
-        setError(error.message);
+    createUserWithEmailAndPassword(auth, email, password).then((result) => {
+      console.log(result.user);
+      setUser(result.user);
+      updateProfile(auth.currentUser, {
+        displayName: name,
       });
+    });
   };
 
   //   sign in with email and password
@@ -66,13 +66,16 @@ const useFirebase = () => {
 
   //   signOut
   const handleSignOut = () => {
+    setIsLoading(true);
     signOut(auth).then(() => {
       setUser({});
     });
+    // .finaly(() => setIsLoading(false));
   };
 
   return {
     user,
+    isLoading,
     error,
     handleGoogleSignIn,
     signUpWithEmailPassword,
