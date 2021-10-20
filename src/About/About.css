@@ -2,6 +2,11 @@
   background-color: rgb(244, 239, 240);
 }
 
+.more-services {
+  box-shadow: 2px 5px 10px gray;
+  background-color: #f2f2eb;
+}
+
 .medical-icon {
   color: #1bcaf0;
   padding-top: 12px;

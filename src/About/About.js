@@ -11,7 +11,10 @@ const About = () => {
             <img className=" img-fluid py-5" src={about} alt="" />
           </div>
           <div className="col-md-6 my-auto">
-            <h2 className="fw-bold mt-2 text-decoration-underline">ABOUT US</h2>
+            <div className="my-3">
+              <h2 className="fw-bold text-center">ABOUT US</h2>
+              <div className="underline-div mx-auto"></div>
+            </div>
             <p className="mb-4">
               For over three decades, we have specialised in specific areas of
               medicine - mental health, orthopaedics, neurology, surgery and
@@ -32,19 +35,19 @@ const About = () => {
             </p>
             <div className="row">
               <div className="col-md-6">
-                <div className="d-flex align-items-center mb-3">
+                <div className="d-flex align-items-center mb-3 more-services p-3 rounded">
                   <div className="icon-div text-center ">
                     <i class="fas fa-ambulance icon medical-icon"></i>
                   </div>
                   <h5>Emergency Care</h5>
                 </div>
-                <div className="d-flex align-items-center mb-3">
+                <div className="d-flex align-items-center mb-3 more-services p-3 rounded">
                   <div className="icon-div text-center ">
                     <i class="fas fa-procedures icon medical-icon"></i>
                   </div>
                   <h5>Operation Theater</h5>
                 </div>
-                <div className="d-flex align-items-center mb-3">
+                <div className="d-flex align-items-center mb-3 more-services p-3 rounded">
                   <div className="icon-div text-center ">
                     <i class="fas fa-stethoscope icon medical-icon"></i>
                   </div>
@@ -52,19 +55,19 @@ const About = () => {
                 </div>
               </div>
               <div className="col-md-6">
-                <div className="d-flex align-items-center mb-3">
+                <div className="d-flex align-items-center mb-3 more-services p-3 rounded">
                   <div className="icon-div text-center ">
                     <i class="fas fa-user-nurse icon medical-icon"></i>
                   </div>
                   <h5>Cancer Service</h5>
                 </div>
-                <div className="d-flex align-items-center mb-3">
+                <div className="d-flex align-items-center mb-3 more-services p-3 rounded">
                   <div className="icon-div text-center ">
                     <i class="fas fa-burn icon medical-icon"></i>
                   </div>
                   <h5>Blood Test</h5>
                 </div>
-                <div className="d-flex align-items-center mb-3">
+                <div className="d-flex align-items-center mb-3 more-services p-3 rounded">
                   <div className="icon-div text-center ">
                     <i class="fas fa-capsules icon medical-icon"></i>
                   </div>

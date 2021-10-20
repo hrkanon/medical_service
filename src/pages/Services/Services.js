@@ -5,14 +5,14 @@ import "./Services.css";
 
 const Services = () => {
   const [services] = useFetch();
-  const allServices = services.filter((service) => service.type !== "doctor");
+  const allServices = services.filter((service) => service.type === "service");
 
   return (
     <div>
       <div className="container mt-5">
         <div>
           <h2 className="text-center mt-5">Our Services</h2>
-          <hr />
+          <div className="underline-div mx-auto"></div>
         </div>
         <div className="row g-3 mt-4">
           {allServices.map((service) => (

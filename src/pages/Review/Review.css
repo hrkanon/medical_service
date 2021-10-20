@@ -1,10 +1,20 @@
 #review {
   padding: 20px;
-  background-color: #dce8eb;
+  background-color: #f6f8fb;
 }
 .reviews p {
   font-size: larger;
 }
 .review-heading {
   font-size: 40px;
+}
+.review-line {
+  width: 150px;
+  height: 2px;
+  background-color: #1ccaf0;
+}
+.review-img {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #1ccaf0;
 }

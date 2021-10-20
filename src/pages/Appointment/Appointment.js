@@ -7,7 +7,7 @@ const Appointment = () => {
   const { user } = useAuth();
   return (
     <div>
-      <div className=" appointment-area p-3 rounded">
+      <div className=" appointment-area p-3 mt-4 rounded">
         <div className="text-center">
           <h2>Make An Appointment</h2>
           <small>(Please fill the Form)</small>

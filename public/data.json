@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "type": "service",
     "name": "Neurology",
     "descriptionOne": " MedService Dhaka is the only hospital in the country to be providing advanced and comprehensive Neurology & Neurosurgery facilities under one roof. ",
     "descriptionTwo": "Department of Neurology of MedService Dhaka provides comprehensive consultative services, diagnostic testing and treatment for a broad spectrum of neurological conditions, including diseases of the brain, spinal cord, peripheral nerves and muscles.",
@@ -9,6 +10,7 @@
   },
   {
     "id": 2,
+    "type": "service",
     "name": "Joint Care",
     "descriptionOne": " MedService Joint Care & Wellness Centre is the first & only super specialty Joint Care & Wellness Centre in Bangladesh dealing with all knee related problems.",
     "descriptionTwo": "Since its inception it has been providing quality services to the patients having knee sufferings by the renowned knee specialist of Bangladesh, Dr. M Ali. He has been performing authoritative practice in this hospital over a decade and has done more than 7,000 knee surgeries here in MedService Dhaka.",
@@ -17,6 +19,7 @@
   },
   {
     "id": 3,
+    "type": "service",
     "name": "Cardiology",
     "descriptionOne": " The MedService Dhaka has gained reputation for its dynamic and innovation in the diagnosis, investigation and treatment of patients with all forms of heart diseases,",
     "descriptionTwo": "We have a dedicated unit of four full-time Consultants, and a team of junior doctors, nurses, and technicians trained to the highest standard in cardiac assessment.",
@@ -25,6 +28,7 @@
   },
   {
     "id": 4,
+    "type": "service",
     "name": "Kidney & Urology",
     "descriptionOne": " MedService Dhaka offers comprehensive kidney transplantation services with collaboration of Department of Urology and Department of Nephrology.",
     "descriptionTwo": "Our kidney transplant program offers the safest services with the best success rates and almost zero percent infection rates, which has made it a national referral program. The program draws on state-of-the-art technology and leading-edge medical and surgical interventions to provide patients with individualized, on-going care.",
@@ -33,6 +37,7 @@
   },
   {
     "id": 5,
+    "type": "service",
     "name": "Cancer Care",
     "descriptionOne": " The division of MedService Cancer Care Centre provides consultations by Consultants- Radiation & Clinical Oncologist, ICU Care, for adult and child cancer patients.",
     "descriptionTwo": "The center is getting ready to provide world class cancer treatment facilities starting from preventive to palliative care under one roof. Evercare Hospital Dhaka, has installed a high-end fully loaded Radiotherapy machine, LINAC HD -VERSA Signature model.",
@@ -41,6 +46,7 @@
   },
   {
     "id": 6,
+    "type": "service",
     "name": "Mother and Child Care",
     "descriptionOne": " The Department of Obstetrics & Gynaecology of MedService Dhaka provides comprehensive services to women in the treatment and management of gynaecologic and obstetric conditions.",
     "descriptionTwo": "We treat variety of problems of female reproductive organs and utilize minimally invasive laparoscopic surgeries and laser surgeries. Our maternity services manage and care for women during pregnancy, childbirth and postnatal periods.",
@@ -118,5 +124,41 @@
     "degree": "MBBS, MD (Gastroenterology)",
     "degignation": "Senior Consultant- Gastroenterology",
     "imageOne": "https://i.ibb.co/DVKG2Nq/doctor-11.jpg"
+  },
+  {
+    "id": 101,
+    "type": "patient",
+    "name": "Kaniz Fatema",
+    "treatment": "Shoulder Pain",
+    "review": "Amazing and lighting fast support from a team that is always there.The environment of MedService inside and outside is soothing and relaxing. Thank you MedService for your Wonderful Team!",
+    "satisfection": "5 star",
+    "imageOne": "https://i.ibb.co/SfSskJg/d7798382-c8ce-4c84-9917-00a92ac4dde0.jpg"
+  },
+  {
+    "id": 102,
+    "type": "patient",
+    "name": "John Smith",
+    "treatment": "Diabetis",
+    "review": "The hospital is really nice but the support for any questions or issues is amazing. especially your emergency response in the emergency section is really quick and handle situation efficiently.",
+    "satisfection": "5 star",
+    "imageOne": "https://i.ibb.co/HLy18Ds/Happy-senior-man-holding-bottle-of-water-and-exercise-mat-in-the-living-room-and-looking-at-camera.jpg"
+  },
+  {
+    "id": 103,
+    "type": "patient",
+    "name": "Nichole Gonjalez",
+    "treatment": "Cardiology",
+    "review": "This is the best hospital I have ever seen in Bangladesh. Doctors,stuffs and the technology you use everything is the international standard. Keep growing MedService!!",
+    "satisfection": "5 star",
+    "imageOne": "https://i.ibb.co/y5t669r/Portrait-of-a-happy-young-woman-at-home.jpg"
+  },
+  {
+    "id": 104,
+    "type": "patient",
+    "name": "Rafiqul Amin",
+    "treatment": "Urology ",
+    "review": "MedService is one of the leading hospital in Bangladesh. they have friendly stuff, doctors and the cost of the service is preety reasonable compare to their service. Keep it up MedService!!",
+    "satisfection": "5 star",
+    "imageOne": "https://i.ibb.co/q0cMQbR/Portrait-of-a-confident-senior-man-enjoying-time-in-a-garden.jpg"
   }
 ]

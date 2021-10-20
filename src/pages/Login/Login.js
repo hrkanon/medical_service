@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { useHistory, useLocation } from "react-router";
+import { Link, useHistory, useLocation } from "react-router-dom";
+
 import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 
@@ -10,14 +9,15 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const location = useLocation();
   const history = useHistory();
-  const redirect_url = location.state?.from || "/";
+  const location = useLocation();
+  const redirect_uri = location.state?.from || "/home";
 
   const googleSignIn = () => {
     handleGoogleSignIn().then((res) => {
-      history.push(redirect_url);
+      history.push(redirect_uri);
     });
   };
 
@@ -29,7 +29,13 @@ const Login = () => {
   };
 
   const handleLogin = (email, password) => {
-    signInUsingEmailPassword(email, password);
+    signInUsingEmailPassword(email, password)
+      .then((result) => {
+        history.push(redirect_uri);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   return (
@@ -47,24 +53,25 @@ const Login = () => {
           type="password"
           placeholder="password"
         />
-        <br />
-        <p>
-          New in MedService?
-          <Link className="text-danger ps-2" to="/register">
-            click here to register
-          </Link>
-        </p>
-        <button
-          className="btn btn-primary w-100"
-          onClick={() => handleLogin(email, password)}
-        >
-          Login
-        </button>
-        <p className="fw-bold mt-2 text-center">Or</p>
-        <button className="w-100 btn btn-primary" onClick={googleSignIn}>
-          Login with Google
-        </button>
       </div>
+      <small className="text-danger ps-4 ms-1">{error}</small>
+      <br />
+      <p className="mt-3 text-center">
+        New in MedService?
+        <Link className="text-danger ps-2" to="/register">
+          click here to register
+        </Link>
+      </p>
+      <button
+        className="btn btn-warning w-100"
+        onClick={() => handleLogin(email, password)}
+      >
+        Login
+      </button>
+      <p className="fw-bold mt-2 text-center">Or</p>
+      <button className="w-100 btn btn-warning" onClick={googleSignIn}>
+        Login with Google
+      </button>
     </div>
   );
 };

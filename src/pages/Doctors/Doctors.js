@@ -8,7 +8,7 @@ const Doctors = () => {
   return (
     <div>
       <h2 className="text-center mt-5">Meet Our Doctors</h2>
-      <hr />
+      <div className="underline-div mx-auto"></div>
       <div className="container">
         <div className="row mt-3 g-3">
           {allDoctors.map((doctor) => (

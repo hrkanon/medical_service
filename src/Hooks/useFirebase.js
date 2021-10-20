@@ -19,14 +19,11 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const auth = getAuth();
+  const googleProvider = new GoogleAuthProvider();
 
   //   sign up using google
   const handleGoogleSignIn = () => {
-    setIsLoading(true);
-    const googleProvider = new GoogleAuthProvider();
-    return signInWithPopup(auth, googleProvider).finally(() =>
-      setIsLoading(false)
-    );
+    return signInWithPopup(auth, googleProvider);
   };
 
   useEffect(() => {
@@ -43,25 +40,22 @@ const useFirebase = () => {
 
   //   Registration with email and password
   const signUpWithEmailPassword = (name, email, password) => {
-    createUserWithEmailAndPassword(auth, email, password).then((result) => {
-      console.log(result.user);
-      setUser(result.user);
-      updateProfile(auth.currentUser, {
-        displayName: name,
-      });
-    });
-  };
-
-  //   sign in with email and password
-  const signInUsingEmailPassword = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
         setError("");
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        });
       })
       .catch((error) => {
         setError(error.message);
       });
+  };
+
+  //   sign in with email and password
+  const signInUsingEmailPassword = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   //   signOut

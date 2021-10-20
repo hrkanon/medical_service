@@ -48,6 +48,7 @@ const Register = () => {
           placeholder="password"
           required
         />
+        <small className="text-danger ps-4">{error}</small>
         <br />
         <p>
           Already have an Account?
@@ -57,7 +58,7 @@ const Register = () => {
         </p>
 
         <button
-          className="btn btn-primary w-100"
+          className="btn btn-warning w-100"
           onClick={() => handleRegister(name, email, password)}
         >
           Register

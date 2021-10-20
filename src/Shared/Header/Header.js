@@ -9,60 +9,68 @@ import useAuth from "../../Hooks/useAuth";
 const Header = () => {
   const { user, handleSignOut } = useAuth();
   return (
-    <div>
+    <>
       <Navbar
+        className="nav-bar"
         collapseOnSelect
-        expand="lg"
         bg="light"
         variant="light"
+        expand="lg"
         sticky="top"
       >
         <Container>
-          <div className="nav-container row">
-            <div className="col-md-6 col-6">
-              <Navbar.Brand>
-                <img className="w-50" src={logo} alt="" />
-              </Navbar.Brand>
-            </div>
-            <div className="col-md-6 col-6 text-right my-auto ">
-              <Navbar.Toggle
-                className="toggle-button"
-                aria-controls="responsive-navbar-nav"
-              />
-              <Navbar.Collapse className="nav-menu" id="responsive-navbar-nav">
-                <Nav>
-                  <Nav.Link className="" as={HashLink} to="/home">
-                    Home
-                  </Nav.Link>
-                  <Nav.Link className="" as={HashLink} to="/services">
-                    Services
-                  </Nav.Link>
-                  <Nav.Link className="" as={Link} to="/doctors">
-                    doctors
-                  </Nav.Link>
-                  <Nav.Link as={HashLink} to="/review">
-                    Reviews
-                  </Nav.Link>
-                  <Nav.Link className="" as={Link} to="/appointment">
-                    Appointment
-                  </Nav.Link>
-                  {user.email ? (
-                    <Nav.Link onClick={handleSignOut}>
-                      {" "}
-                      <span className="pe-3">{user.displayName}</span> Logout
-                    </Nav.Link>
-                  ) : (
-                    <Nav.Link as={Link} to="/login">
-                      Login
-                    </Nav.Link>
-                  )}
-                </Nav>
-              </Navbar.Collapse>
-            </div>
-          </div>
+          <Navbar.Brand>
+            <img className="w-75" src={logo} alt="" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse className="justify-content-end ">
+            <Nav.Link
+              className="text-center text-dark"
+              as={HashLink}
+              to="/home"
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              className="text-center text-dark"
+              as={HashLink}
+              to="/services"
+            >
+              Services
+            </Nav.Link>
+            <Nav.Link className="text-center text-dark" as={Link} to="/doctors">
+              doctors
+            </Nav.Link>
+            <Nav.Link
+              className="text-center text-dark"
+              as={HashLink}
+              to="/review"
+            >
+              Reviews
+            </Nav.Link>
+            <Nav.Link
+              className="text-center text-dark"
+              as={Link}
+              to="/appointment"
+            >
+              Appointment
+            </Nav.Link>
+            {user.email ? (
+              <Nav.Link className="text-dark text-center">
+                Signed as: {user.displayName}
+                <span className="ps-3" onClick={handleSignOut}>
+                  Logout
+                </span>
+              </Nav.Link>
+            ) : (
+              <Nav.Link className="text-center text-dark" as={Link} to="/login">
+                Login
+              </Nav.Link>
+            )}
+          </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,10 @@
-.banner {
-  height: 83vh;
+.item-1 {
   background-image: url("../../images/banner-img-4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.item-2 {
+  background-image: url("../../images/banner-img-6.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }

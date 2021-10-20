@@ -16,7 +16,7 @@ const Service = (props) => {
             <h3>{name}</h3>
             <p>{descriptionOne}</p>
             <div className="details">
-              <Link to={`/details/${id}`}>
+              <Link to={`/service/${id}`}>
                 Details <i class="fas fa-angle-double-right"></i>
               </Link>
             </div>
