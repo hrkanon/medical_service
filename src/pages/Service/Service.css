@@ -1,13 +1,13 @@
 .card {
   height: 350px;
-  transition: 0.5s;
+  transition: 1s;
 }
 .card:hover {
   box-shadow: 2px 5px 10px gray;
   border-color: aqua;
 }
 
-.card:hover img {
+.service-card:hover img {
   overflow: hidden;
   transform: scale(1.5);
   transition: transform 0.8s;
