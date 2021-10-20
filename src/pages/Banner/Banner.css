@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.item-3 {
+  background-image: url("../../images/banner-img-5.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .heading-one {
   font-weight: 800;
   font-size: 40px;

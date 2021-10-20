@@ -11,7 +11,8 @@ const Review = () => {
     <div id="review">
       <div className="review-details my-5">
         <h2 className="fw-bold text-center review-heading">
-          <span className="text-warning">What Others Said</span> About Medicare
+          <span className="text-warning">What Others Said</span> About
+          MedService
         </h2>
         <p className="text-center">
           5 star customer reviews are often given to MedService for the doctors,

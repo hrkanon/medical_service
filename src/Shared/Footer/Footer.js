@@ -1,14 +1,15 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../../images/logo-2.png";
+import logo from "../../images/footer-logo.png";
 
 const Footer = () => {
   return (
-    <div className=" mt-5 bg-dark text-white w-100">
+    <div className=" mt-5 footer-sec text-white w-100">
       <div className="container p-5">
-        <div className="row">
+        <img className="footer-logo" src={logo} alt="" />
+        <div className="row mt-2">
           <div className="col-md-3 ">
-            <h4>Contact Us</h4>
+            <h3>Contact Us</h3>
             <p>
               <i class="fas fa-phone"></i> +91 892 944 8112
             </p>
@@ -27,7 +28,7 @@ const Footer = () => {
           </div>
           <div className="col-md-3 mx-auto">
             <div>
-              <h4>About Us</h4>
+              <h3>About Us</h3>
               <p>Careers</p>
               <p>Services</p>
               <p>General Health Advisory</p>
@@ -36,7 +37,7 @@ const Footer = () => {
           </div>
           <div className="col-md-3 ">
             <div>
-              <h4>Patients</h4>
+              <h3>Patients</h3>
               <p>How it Works</p>
               <p>Find a Hospital</p>
               <p>Find a Doctor</p>
@@ -45,13 +46,17 @@ const Footer = () => {
           </div>
           <div className="col-md-3 ">
             <div>
-              <h4>Providers</h4>
+              <h3>Providers</h3>
               <p>How it Workes</p>
               <p>Hospital Registration</p>
               <p>Doctor Registration</p>
               <p>My Account</p>
             </div>
           </div>
+        </div>
+        <hr />
+        <div className="text-center">
+          <small> &copy; Copiright 2021 MedService. All Rights Reserved</small>
         </div>
       </div>
     </div>

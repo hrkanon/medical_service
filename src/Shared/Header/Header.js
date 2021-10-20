@@ -19,10 +19,12 @@ const Header = () => {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand>
-            <img className="w-75" src={logo} alt="" />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <div className="d-flex justify-content-end ">
+            <Navbar.Brand>
+              <img className="w-75" src={logo} alt="" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          </div>
           <Navbar.Collapse className="justify-content-end ">
             <Nav.Link
               className="text-center text-dark"
