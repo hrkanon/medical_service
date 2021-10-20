@@ -47,6 +47,7 @@ const useFirebase = () => {
         updateProfile(auth.currentUser, {
           displayName: name,
         });
+        window.location.reload();
       })
       .catch((error) => {
         setError(error.message);

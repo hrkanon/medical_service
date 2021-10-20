@@ -7,6 +7,11 @@
   border-color: aqua;
 }
 
+.card:hover img {
+  overflow: hidden;
+  transform: scale(1.5);
+  transition: transform 0.8s;
+}
 .details {
   position: absolute;
   right: 0;
